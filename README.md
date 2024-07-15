@@ -3,22 +3,29 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+# Web Scraping Task
 
-* Ruby version
+## Description
 
-* System dependencies
+A web scraper api to extract data from Y Combinator's publicly listed companies from this url: https://www.ycombinator.com/companies
 
-* Configuration
+## Technologies Used and versions
 
-* Database creation
+- Ruby on Rails: ruby 3.0.0, rails 7.0.8
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+1. Clone the repository:
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```bash
+   git clone https://github.com/ishaingle/yc_companies_scraper.git
+   cd yc_companies_scraper
 
-* Deployment instructions
+2. Install dependencies:
+   bundle install
 
-* ...
+4. Run the server:
+   rails server
+
+5. Access url using following params and download csv including company details:
+   http://localhost:3000/scrape_and_return_csv.csv?filters[batch]=W12&filters[industry]=B2B&filters[region]=San Francisco&filters[tag]=B2B&filters[company_size]=1-10&filters[is_hiring]=true&filters[nonprofit]=false&filters[black_founded]=true&filters[hispanic_latino_founded]=false&filters[women_founded]=true&n=12
